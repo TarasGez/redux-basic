@@ -61,7 +61,8 @@ gulp.task("browser-init", (done) => {
 gulp.task("watch", (done) => {
     gulp.watch("app/**/*.html", gulp.series("html"));
     gulp.watch("app/**/*.css", gulp.series("css"));
-    gulp.watch("app/**/*.js*", gulp.series("js"));
+    gulp.watch("app/**/*.js", gulp.series("js"));
+    gulp.watch("app/**/*.jsx", gulp.series("react"));
     done();
 });
 
