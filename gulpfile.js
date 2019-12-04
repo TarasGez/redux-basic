@@ -36,7 +36,8 @@ gulp.task('react', (done) => {
         .transform('babelify', {presets: ["@babel/preset-env", "@babel/preset-react"]})
         .bundle()
         .pipe(source('bundle.js'))
-        .pipe(gulp.dest('build'));
+        .pipe(gulp.dest('build'))
+        .pipe(browserSync.stream());
     done();
 });
 
